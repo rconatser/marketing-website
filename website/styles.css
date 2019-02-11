@@ -26,6 +26,10 @@ ol li {
 p.btn a {
     color: white;
     text-decoration: none;
+    letter-spacing: 1.7px;
+    font-weight: 800;
+    font-size: 14px;
+    text-transform: uppercase;
 }
 
 p.btn {
@@ -109,18 +113,24 @@ div.section .text, div.section.text {
 .padding-0 {
     padding: 0;
 }
-/*
 
-.display-flex {
-    display: block;
+span.underline {
+    content: '';
+    border-bottom: 1px #aaa solid;
+    width: 100%;
+    
 }
-*/
 
 /*-------End Section Styles------------*/
+footer {
+    text-align: center;
+    padding: 20px 0 8px;
+}
+
 /*-------Start Hero Styles--------------*/
 div.hero {
     background-image: url('images/bath-hero.jpg');
-    background-position: bottom; 
+    background-position: top; 
     background-attachment: fixed;
     padding-bottom: 100px;
     display: flex;
@@ -128,10 +138,25 @@ div.hero {
     align-items: center;
     justify-content: center;
     height: 400px;
+    background-repeat: no-repeat;
 }
 
 div.hero h1 {
     color: white;
+}
+
+/*---- Edits for underlined header ----*/
+body main p:before, body main ul:before {
+    content: "";
+    position: absolute;
+    width: 100px;
+    height: 1px;
+    border-top: 1px solid black; 
+    margin-top: -12px;
+}
+
+body main p.btn:before {
+    border: 0px !important;
 }
 
 /*--------targets tablet screens and up--------------*/
@@ -140,3 +165,33 @@ div.hero h1 {
         top: 358px;
     }
     
+    .flex-right {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: center;
+}
+    
+    /*-- Testimonials --*/
+.testimonials {
+    background-color: #3A5348;
+    padding: 0; margin: 0; 
+    padding-bottom: 40px;
+}
+
+.testimonials .text {
+    background-color: white;
+    padding: 0;
+    margin: 0;
+    margin-left: -20px;
+}
+
+.testimonials .text p {
+    width: 80%;
+    padding: 40px 0;
+    margin: 0 10%;
+}
+
+.testimonials .text h2 {
+    width: 80%;
+    margin: 20px 10% -30px;
+}
